@@ -1,8 +1,7 @@
 package main;
 
 import java.util.Scanner;
-import java.util.stream.IntStream;
-import java.util.stream.*;
+
 
 public class App {
 	public static void main(String[] args) {
@@ -45,15 +44,18 @@ public class App {
 			roomStrings[i] = myScanner.next(); 
 		}
 		
+		System.out.println();
+		System.out.println();
+		
+		student.calculateTotalSks(sks, student.getFullName());
+		
 		System.out.println("======= Pengambilan Mata Kuliah =======");
 		for(int i = 0; i < ambilMatKul; i++) {
 			student.learningPlan(courseNameStrings[i], sks[i], roomStrings[i]);
 		}
 		System.out.println("=======================================");
 		
-		student.calculateTotalSks(sks, student.getFullName());
-		
-		
+		myScanner.close();
 		
 	}
 }	

@@ -3,15 +3,7 @@ package main;
 import java.util.stream.IntStream;
 
 public class Student extends Person implements StudentInteface{
-	
-	private String lecture;
-	private String courseNameString;
-	private int sks;
-	private String room;
-	private int cardIdentitas;
-	private int totalSks;
-
-	
+		
 	public Student(String firstName, String lastName, String domisili) {
 		super(firstName, lastName, domisili);
 	}
