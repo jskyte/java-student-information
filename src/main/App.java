@@ -31,6 +31,7 @@ public class App {
 		String[] courseNameStrings = new String[ambilMatKul];
 		int[] sks = new int[ambilMatKul];
 		String[] roomStrings = new String[ambilMatKul];
+		String[] lectureStrings = new String[ambilMatKul];
 		
 		for (int i = 0; i < ambilMatKul; i++) {
 			System.out.println("======== Data Mata Kuliah =======");
@@ -42,6 +43,9 @@ public class App {
 			
 			System.out.print("Ruangan: ");
 			roomStrings[i] = myScanner.next(); 
+			
+			System.out.print("Lecturer:" );
+			lectureStrings[i] = myScanner.next();
 		}
 		
 		System.out.println();
@@ -49,11 +53,11 @@ public class App {
 		
 		student.calculateTotalSks(sks, student.getFullName());
 		
-		System.out.println("======= Pengambilan Mata Kuliah =======");
+		System.out.println("================ Pengambilan Mata Kuliah ================");
 		for(int i = 0; i < ambilMatKul; i++) {
-			student.learningPlan(courseNameStrings[i], sks[i], roomStrings[i]);
+			student.learningPlan(courseNameStrings[i], sks[i], roomStrings[i], lectureStrings[i]);
 		}
-		System.out.println("=======================================");
+		System.out.println("=========================================================");
 		
 		myScanner.close();
 		

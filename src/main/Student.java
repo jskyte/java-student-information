@@ -17,9 +17,9 @@ public class Student extends Person implements StudentInteface{
 	}
 
 	@Override
-	public void learningPlan(String courseName, int sks, String room) {
+	public void learningPlan(String courseName, int sks, String room, String lecture) {
 		// TODO Auto-generated method stub
-		System.out.println("Mata Kuliah: " + courseName + ", SKS: " + sks + ", Ruangan: " + room);
+		System.out.println("Mata Kuliah: " + courseName + ", SKS: " + sks + ", Ruangan: " + room + ", Lecturer: " + lecture);
 	}
 	
 	public void calculateTotalSks(int[] sks, String fullName) {
