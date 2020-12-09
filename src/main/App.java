@@ -15,16 +15,19 @@ public class App {
 		System.out.print("Masukkan Domisili: ");
 		String domisiliString = myScanner.next();
 		
+		System.out.println();
 		System.out.println("=======Data Mahasiswa=======");
 		System.out.print("Masukkan NIM: ");
 		int cardIdentitas = myScanner.nextInt();
 		
 		Student student = new Student(firstNameString, lastNameString, domisiliString);
 		
+		System.out.println();
 		System.out.println("=======Informasi Anda=======");
 		student.studentRegistration(student.getFullName(), cardIdentitas);	
 		System.out.println(student.getDomisili());
 		
+		System.out.println();
 		System.out.print("Jumlah mata kuliah yang Anda ambil: ");
 		int ambilMatKul = myScanner.nextInt();
 		
@@ -34,6 +37,7 @@ public class App {
 		String[] lectureStrings = new String[ambilMatKul];
 		
 		for (int i = 0; i < ambilMatKul; i++) {
+			System.out.println();
 			System.out.println("======== Data Mata Kuliah =======");
 			System.out.print("Nama Mata Kuliah: ");
 			courseNameStrings[i] = myScanner.next();
@@ -44,7 +48,7 @@ public class App {
 			System.out.print("Ruangan: ");
 			roomStrings[i] = myScanner.next(); 
 			
-			System.out.print("Lecturer:" );
+			System.out.print("Lecturer: " );
 			lectureStrings[i] = myScanner.next();
 		}
 		
